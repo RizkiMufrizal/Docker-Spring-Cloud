@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:0}
+
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery1:10000/eureka/,http://discovery2:10000/eureka/
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
