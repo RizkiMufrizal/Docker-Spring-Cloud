@@ -1,0 +1,35 @@
+version: '3'
+services: 
+  discovery1:
+    command: bash -c 'java -Dspring.profiles.active=discovery1 -jar /app.jar'
+    container_name: discovery1
+    image: org.rizki.mufrizal.discovery.service/discovery-service
+    ports: 
+      - 10001:10001
+    networks: 
+      main:
+        aliases: 
+          - discovery1
+
+  discovery2:
+    command: bash -c 'java -Dspring.profiles.active=discovery2 -jar /app.jar'
+    container_name: discovery2
+    image: org.rizki.mufrizal.discovery.service/discovery-service
+    ports: 
+      - 10002:10002
+    networks: 
+      main:
+        aliases: 
+          - discovery2
+
+  configurationserver:
+    command: bash -c 'java -jar /app.jar'
+    container_name: configurationserver
+    image: org.rizki.mufrizal.configuration.server/configuration-server
+    networks: 
+      main:
+        aliases: 
+          - configurationserver
+
+networks: 
+  main:
