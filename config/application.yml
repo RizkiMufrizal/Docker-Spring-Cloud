@@ -9,6 +9,6 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery1:10000/eureka/,http://discovery2:10000/eureka/
+      defaultZone: http://discovery1:10001/eureka/,http://discovery2:10002/eureka/
   instance:
     instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
