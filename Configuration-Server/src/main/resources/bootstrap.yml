@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: configuration-server
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/RizkiMufrizal/Docker-Spring-Cloud.git
+          search-paths: 'config, config/{application}'
+          clone-on-start: true
+          basedir: 'build/config'
