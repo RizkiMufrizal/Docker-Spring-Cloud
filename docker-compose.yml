@@ -31,5 +31,26 @@ services:
         aliases: 
           - configurationserver
 
+  postgrescatalog:
+    container_name: postgrescatalog
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgrescatalog
+      POSTGRES_PASSWORD: postgrescatalog
+      POSTGRES_DB: db_catalog
+    networks: 
+      main:
+        aliases: 
+          - postgrescatalog
+
+  catalogservice:
+    command: bash -c 'sleep 120 && java -jar /app.jar'
+    container_name: catalogservice
+    image: org.rizki.mufrizal.catalog.service/catalog-service
+    networks: 
+      main:
+        aliases: 
+          - catalogservice
+
 networks: 
   main:
