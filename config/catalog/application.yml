@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://postgrescatalog:5432/db_catalog?createDatabaseIfNotExist=true
+    url: jdbc:postgresql://postgrescatalog:5432/db_catalog?autoReconnect=true
     username: postgrescatalog
     password: postgrescatalog
     poolName: SpringBootHikariCP
