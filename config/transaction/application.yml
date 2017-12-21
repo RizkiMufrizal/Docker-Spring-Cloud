@@ -1,0 +1,9 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: cassandratransaction
+      cluster-name: Test Cluster
+      contact-points: cassandratransaction
+      port: 9042
+      username: cassandra
+      password: cassandra
