@@ -52,5 +52,22 @@ services:
         aliases: 
           - catalogservice
 
+  mongotransaction:
+    container_name: mongotransaction
+    image: mongo:latest
+    networks: 
+      main:
+        aliases: 
+          - mongotransaction
+
+  transactionservice:
+    command: bash -c 'sleep 120 && java -jar /app.jar'
+    container_name: transactionservice
+    image: org.rizki.mufrizal.transaction.service/transaction-service
+    networks: 
+      main:
+        aliases: 
+          - transactionservice
+
 networks: 
   main:
