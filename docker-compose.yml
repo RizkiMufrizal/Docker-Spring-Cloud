@@ -69,5 +69,37 @@ services:
         aliases: 
           - transactionservice
 
+  mariadboauth2:
+    container_name: mariadboauth2
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: mariadboauth2
+      MYSQL_USER: mariadboauth2
+      MYSQL_PASSWORD: mariadboauth2
+      MYSQL_DATABASE: db_oauth2
+    networks: 
+      main:
+        aliases: 
+          - mariadboauth2
+
+  redissessionoauth2:
+    container_name: redissessionoauth2
+    image: bitnami/redis:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    networks: 
+      main:
+        aliases: 
+          - redissessionoauth2
+
+  oauth2service:
+    command: bash -c 'sleep 120 && java -jar /app.jar'
+    container_name: oauth2service
+    image: org.rizki.mufrizal.oauth2.service/oauth2-service
+    networks: 
+      main:
+        aliases: 
+          - oauth2service
+
 networks: 
   main:
