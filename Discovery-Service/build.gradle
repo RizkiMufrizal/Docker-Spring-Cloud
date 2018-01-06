@@ -57,6 +57,7 @@ ext {
 }
 
 dependencies {
+    compile('org.springframework.cloud:spring-cloud-starter-hystrix')
     compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
     compile("de.codecentric:spring-boot-admin-server:${springBootAdminServer}")
     compile("de.codecentric:spring-boot-admin-server-ui:${springBootAdminServer}")
