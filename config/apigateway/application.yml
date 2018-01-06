@@ -30,3 +30,19 @@ zuul:
       path: /transaction/**
       sensitiveHeaders: Cookie,Set-Cookie
       serviceId: transaction
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+oauth2:
+  ribbon:
+    ReadTimeout: 15000
+catalog:
+  ribbon:
+    ReadTimeout: 15000
+transaction:
+  ribbon:
+    ReadTimeout: 15000
