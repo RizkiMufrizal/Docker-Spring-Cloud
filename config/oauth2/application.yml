@@ -35,3 +35,6 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 server:
   port: 8089
+management:
+  security:
+    enabled: false

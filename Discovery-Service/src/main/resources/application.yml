@@ -23,13 +23,9 @@ eureka:
     registry-fetch-interval-seconds: 5
   dashboard:
     enabled: false
-security:
-  oauth2:
-    client:
-      access-token-uri: http://oauth2service:8089/oauth/token
-      user-authorization-uri: http://oauth2service:8089/oauth/authorize
-      client-id: clientid
-      client-secret: secret
+management:
+  security:
+    enabled: false
 
 ---
 spring:
@@ -52,10 +48,6 @@ eureka:
     registry-fetch-interval-seconds: 5
   dashboard:
     enabled: false
-security:
-  oauth2:
-    client:
-      access-token-uri: http://oauth2service:8089/oauth/token
-      user-authorization-uri: http://oauth2service:8089/oauth/authorize
-      client-id: clientid
-      client-secret: secret
+management:
+  security:
+    enabled: false

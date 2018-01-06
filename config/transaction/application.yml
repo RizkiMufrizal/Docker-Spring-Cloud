@@ -4,3 +4,6 @@ spring:
       database: mongotransaction
       host: mongotransaction
       port: 27017
+management:
+  security:
+    enabled: false

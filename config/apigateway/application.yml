@@ -39,10 +39,13 @@ hystrix:
             timeoutInMilliseconds: 30000
 oauth2:
   ribbon:
-    ReadTimeout: 15000
+    ReadTimeout: 30000
 catalog:
   ribbon:
-    ReadTimeout: 15000
+    ReadTimeout: 30000
 transaction:
   ribbon:
-    ReadTimeout: 15000
+    ReadTimeout: 30000
+management:
+  security:
+    enabled: false
