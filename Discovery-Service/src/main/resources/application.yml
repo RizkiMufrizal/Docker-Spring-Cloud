@@ -11,6 +11,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://discovery2:10002/eureka/
+  dashboard:
+    enabled: false
 
 ---
 spring:
@@ -21,3 +23,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://discovery1:10001/eureka/
+  dashboard:
+    enabled: false

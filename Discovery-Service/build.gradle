@@ -3,6 +3,7 @@ buildscript {
         kotlinVersion = '1.2.10'
         springBootVersion = '1.5.9.RELEASE'
         gradleDockerPlugin = '0.13.0'
+        springCloudDashboard = '1.2.0.RELEASE'
     }
     repositories {
         maven {
@@ -56,6 +57,7 @@ ext {
 
 dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
+    compile("com.github.vanroy:spring-cloud-dashboard:${springCloudDashboard}")
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
     compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     testCompile('org.springframework.boot:spring-boot-starter-test')
