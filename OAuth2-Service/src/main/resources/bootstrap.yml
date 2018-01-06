@@ -1,5 +1,3 @@
-server:
-  port: 8089
 spring:
   application:
     name: oauth2
