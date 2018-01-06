@@ -101,5 +101,16 @@ services:
         aliases: 
           - oauth2service
 
+  apigateway:
+    command: bash -c 'sleep 120 && java -jar /app.jar'
+    container_name: apigateway
+    image: org.rizki.mufrizal.api.gateway/api-gateway
+    ports: 
+      - 8080:8080
+    networks: 
+      main:
+        aliases: 
+          - apigateway
+
 networks: 
   main:
