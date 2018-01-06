@@ -20,4 +20,13 @@ zuul:
   routes:
     oauth2:
       path: /api/**
+      sensitiveHeaders: Cookie,Set-Cookie
       serviceId: oauth2
+    catalog:
+      path: /catalog/**
+      sensitiveHeaders: Cookie,Set-Cookie
+      serviceId: catalog
+    transaction:
+      path: /transaction/**
+      sensitiveHeaders: Cookie,Set-Cookie
+      serviceId: transaction
