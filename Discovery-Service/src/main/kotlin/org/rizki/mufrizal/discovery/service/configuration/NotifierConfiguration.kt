@@ -5,6 +5,7 @@ import de.codecentric.boot.admin.notify.RemindingNotifier
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.context.annotation.Lazy
 import org.springframework.context.annotation.Primary
 import org.springframework.scheduling.annotation.EnableScheduling
 import org.springframework.scheduling.annotation.Scheduled
@@ -25,13 +26,13 @@ import java.util.concurrent.TimeUnit
 
 @Configuration
 @EnableScheduling
-class NotifierConfiguration @Autowired constructor(val notifier: Notifier) {
+class NotifierConfiguration @Autowired constructor(@Lazy val notifier: Notifier) {
 
     @Bean
     @Primary
     fun remindingNotifier(): RemindingNotifier {
         val remindingNotifier = RemindingNotifier(notifier)
-        remindingNotifier.setReminderPeriod(TimeUnit.MINUTES.toMillis(0))
+        remindingNotifier.setReminderPeriod(TimeUnit.MINUTES.toMillis(5))
         return remindingNotifier
     }
 

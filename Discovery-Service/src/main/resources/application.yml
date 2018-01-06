@@ -19,7 +19,7 @@ eureka:
     lease-renewal-interval-in-seconds: 10
   client:
     service-url:
-      defaultZone: http://127.0.0.1:10002/eureka/
+      defaultZone: http://discovery2:10002/eureka/
     registry-fetch-interval-seconds: 5
   dashboard:
     enabled: false
@@ -44,7 +44,7 @@ eureka:
     lease-renewal-interval-in-seconds: 10
   client:
     service-url:
-      defaultZone: http://127.0.0.1:10001/eureka/
+      defaultZone: http://discovery1:10001/eureka/
     registry-fetch-interval-seconds: 5
   dashboard:
     enabled: false
