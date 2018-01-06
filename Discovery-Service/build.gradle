@@ -62,10 +62,12 @@ dependencies {
     compile("de.codecentric:spring-boot-admin-server-ui:${springBootAdminServer}")
     compile("de.codecentric:spring-boot-admin-server-ui-hystrix:${springBootAdminServer}")
     compile("de.codecentric:spring-boot-admin-server-ui-turbine:${springBootAdminServer}")
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile('org.springframework.cloud:spring-cloud-starter-oauth2')
+    compile('org.springframework.security.oauth:spring-security-oauth2')
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
     compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     compile("org.jolokia:jolokia-core:${jolokia}")
-    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 dependencyManagement {
