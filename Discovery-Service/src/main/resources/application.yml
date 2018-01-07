@@ -1,12 +1,15 @@
 spring:
   application:
     name: discovery_service
+
+---
+spring:
+  profiles: discovery1
   cloud:
     dashboard:
       http:
         username: actuator
         password: actuator
----
 server:
   port: 10001
 eureka:
@@ -23,6 +26,13 @@ management:
   security:
     enabled: false
 ---
+spring:
+  profiles: discovery2
+  cloud:
+    dashboard:
+      http:
+        username: actuator
+        password: actuator
 server:
   port: 10002
 eureka:
