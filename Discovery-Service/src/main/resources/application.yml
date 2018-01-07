@@ -29,11 +29,11 @@ eureka:
 management:
   security:
     enabled: false
-zuul:
-  sensitive-headers: Cookie,Set-Cookie
-user:
-  name: actuator
-  password: actuator
+zuul.sensitiveHeaders:
+security:
+  user:
+    name: actuator
+    password: actuator
 
 ---
 spring:
@@ -62,8 +62,8 @@ eureka:
 management:
   security:
     enabled: false
-zuul:
-  sensitive-headers: Cookie,Set-Cookie
-user:
-  name: actuator
-  password: actuator
+zuul.sensitiveHeaders:
+security:
+  user:
+    name: actuator
+    password: actuator
