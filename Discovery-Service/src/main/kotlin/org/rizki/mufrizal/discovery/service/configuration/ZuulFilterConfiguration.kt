@@ -46,6 +46,6 @@ class ZuulFilterConfiguration constructor(private val environment: Environment) 
     }
 
     override fun filterOrder(): Int {
-        return 0
+        return 999
     }
 }
