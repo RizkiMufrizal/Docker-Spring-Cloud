@@ -37,4 +37,5 @@ server:
   port: 8089
 management:
   security:
-    enabled: false
+    roles: R_0
+    enabled: true
