@@ -29,6 +29,8 @@ eureka:
 management:
   security:
     enabled: false
+zuul:
+  sensitive-headers: Cookie,Set-Cookie
 
 ---
 spring:
@@ -57,3 +59,5 @@ eureka:
 management:
   security:
     enabled: false
+zuul:
+  sensitive-headers: Cookie,Set-Cookie
