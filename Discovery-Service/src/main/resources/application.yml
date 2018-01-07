@@ -1,69 +1,40 @@
 spring:
   application:
     name: discovery_service
-
----
-spring:
-  profiles: discovery1
-  boot:
-    admin:
-      auth:
+  cloud:
+    dashboard:
+      http:
         username: actuator
         password: actuator
-      turbine:
-        clusters: default
-        location: turbine
-      routes:
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
+---
 server:
   port: 10001
 eureka:
-  instance:
-    lease-renewal-interval-in-seconds: 10
   client:
     service-url:
       defaultZone: http://discovery2:10002/eureka/
-    registry-fetch-interval-seconds: 5
+    register-with-eureka: true
+    fetch-registry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0
   dashboard:
     enabled: false
 management:
   security:
     enabled: false
-zuul.sensitiveHeaders:
-security:
-  user:
-    name: actuator
-    password: actuator
-
 ---
-spring:
-  profiles: discovery2
-  boot:
-    admin:
-      auth:
-        username: actuator
-        password: actuator
-      turbine:
-        clusters: default
-        location: turbine
-      routes:
-        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
 server:
   port: 10002
 eureka:
-  instance:
-    lease-renewal-interval-in-seconds: 10
   client:
     service-url:
       defaultZone: http://discovery1:10001/eureka/
-    registry-fetch-interval-seconds: 5
+    register-with-eureka: true
+    fetch-registry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0
   dashboard:
     enabled: false
 management:
   security:
     enabled: false
-zuul.sensitiveHeaders:
-security:
-  user:
-    name: actuator
-    password: actuator
