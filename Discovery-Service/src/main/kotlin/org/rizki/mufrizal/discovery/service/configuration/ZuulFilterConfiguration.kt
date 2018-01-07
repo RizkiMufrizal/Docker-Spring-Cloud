@@ -2,6 +2,7 @@ package org.rizki.mufrizal.discovery.service.configuration
 
 import com.netflix.zuul.ZuulFilter
 import com.netflix.zuul.context.RequestContext
+import org.springframework.beans.factory.InitializingBean
 import org.springframework.core.env.Environment
 import org.springframework.http.HttpHeaders
 import java.nio.charset.Charset
@@ -19,12 +20,19 @@ import java.util.Base64
  *
  */
 
-class ZuulFilterConfiguration constructor(private val environment: Environment) : ZuulFilter() {
+class ZuulFilterConfiguration constructor(private val environment: Environment) : ZuulFilter(), InitializingBean {
+
+    private var base64String: String? = null
+
+    override fun afterPropertiesSet() {
+        val usernamePassword = "${environment.getRequiredProperty("spring.boot.admin.auth.username")}:${environment.getRequiredProperty("spring.boot.admin.auth.password")}"
+        base64String = Base64.getEncoder().encodeToString(usernamePassword.toByteArray(Charset.defaultCharset()))
+    }
 
     override fun run(): Any? {
         val requestContext = RequestContext.getCurrentContext()
-        val usernamePassword = "${environment.getRequiredProperty("spring.boot.admin.auth.username")}:${environment.getRequiredProperty("spring.boot.admin.auth.password")}"
-        val base64String = Base64.getEncoder().encodeToString(usernamePassword.toByteArray(Charset.defaultCharset()))
+        val pathUrl = requestContext.request.requestURI
+        println("test url $pathUrl")
         requestContext.addZuulRequestHeader(HttpHeaders.AUTHORIZATION, "Basic $base64String")
         return null
     }
@@ -38,6 +46,6 @@ class ZuulFilterConfiguration constructor(private val environment: Environment) 
     }
 
     override fun filterOrder(): Int {
-        return 10
+        return 0
     }
 }
