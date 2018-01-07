@@ -41,6 +41,13 @@ class OAuth2ServiceApplication : CommandLineRunner {
                     isActive = true,
                     roles = setOf("ROLE_ADMIN", "ROLE_USER")
             ))
+
+            this.userRepositoty.save(User(
+                    username = "actuator",
+                    password = BCryptPasswordEncoder().encode("actuator"),
+                    isActive = true,
+                    roles = setOf("ACTUATOR")
+            ))
         }
 
         if (!this.oAuth2ClientDetailRepository.findByClientId("clientid").isPresent) {

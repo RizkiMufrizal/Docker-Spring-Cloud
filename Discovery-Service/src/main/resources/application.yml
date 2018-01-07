@@ -7,6 +7,9 @@ spring:
   profiles: discovery1
   boot:
     admin:
+      auth:
+        username: actuator
+        password: actuator
       turbine:
         clusters: default
         location: turbine
@@ -32,6 +35,9 @@ spring:
   profiles: discovery2
   boot:
     admin:
+      auth:
+        username: actuator
+        password: actuator
       turbine:
         clusters: default
         location: turbine
