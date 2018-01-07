@@ -31,6 +31,9 @@ management:
     enabled: false
 zuul:
   sensitive-headers: Cookie,Set-Cookie
+user:
+  name: actuator
+  password: actuator
 
 ---
 spring:
@@ -61,3 +64,6 @@ management:
     enabled: false
 zuul:
   sensitive-headers: Cookie,Set-Cookie
+user:
+  name: actuator
+  password: actuator
