@@ -7,9 +7,9 @@ services:
       - "8500:8500"
       - "8600:8600"
     command: |
-      sh -c 'sleep 20 && set -uex; \
-        consul agent -server -bootstrap-expect=1 -data-dir /consul/data -node=agent-one -enable-script-checks=true -ui -disable-host-node-id -client 0.0.0.0; \
-        consul kv put rizki/nama oke'
+      sh -c 'set -uex; \
+        consul agent -server -bootstrap-expect=1 -data-dir /consul/data -node=agent-one -enable-script-checks=true -ui -disable-host-node-id -client 0.0.0.0 & \
+        sleep 20 && consul kv put rizki/nama oke'
     volumes: 
       - '/tmp/consul_data_1:/consul/data'
     networks: 
