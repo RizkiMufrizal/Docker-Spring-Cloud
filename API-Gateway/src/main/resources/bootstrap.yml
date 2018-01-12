@@ -8,6 +8,7 @@ spring:
       discovery:
         healthCheckPath: /health-check
         healthCheckInterval: 20s
+        prefer-ip-address: true
     config:
       fail-fast: true
       discovery:
