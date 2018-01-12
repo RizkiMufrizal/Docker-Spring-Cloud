@@ -1,26 +1,16 @@
 version: '3'
 services: 
-  discovery1:
-    command: bash -c 'java -Dspring.profiles.active=discovery1 -jar /app.jar'
-    container_name: discovery1
-    image: org.rizki.mufrizal.discovery.service/discovery-service
-    ports: 
-      - 10001:10001
+  consul:
+    image: consul:latest
+    ports:
+      - "8400:8400"
+      - "8500:8500"
+      - "8600:8600"
+    command: "agent -server -bootstrap-expect=1 -data-dir=/tmp/consul -node=agent-one -enable-script-checks=true -config-dir=/etc/consul.d -ui -disable-host-node-id -client 0.0.0.0"
     networks: 
       main:
         aliases: 
-          - discovery1
-
-  discovery2:
-    command: bash -c 'java -Dspring.profiles.active=discovery2 -jar /app.jar'
-    container_name: discovery2
-    image: org.rizki.mufrizal.discovery.service/discovery-service
-    ports: 
-      - 10002:10002
-    networks: 
-      main:
-        aliases: 
-          - discovery2
+          - consul
 
   configurationserver:
     command: bash -c 'java -jar /app.jar'

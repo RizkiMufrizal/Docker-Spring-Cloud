@@ -47,6 +47,7 @@ open class OAuth2Configuration {
         override fun configure(httpSecurity: HttpSecurity?) {
             httpSecurity
                     ?.authorizeRequests()
+                    ?.antMatchers("/health-check")?.permitAll()
                     ?.antMatchers("/v1/api/oauth/**")?.permitAll()
                     ?.antMatchers("/v1/catalog/**")?.fullyAuthenticated()
                     ?.antMatchers("/v1/transaction/**")?.fullyAuthenticated()

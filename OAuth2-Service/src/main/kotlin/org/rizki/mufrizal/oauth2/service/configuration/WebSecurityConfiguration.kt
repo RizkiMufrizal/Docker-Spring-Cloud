@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.core.annotation.Order
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
+import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
 import org.springframework.security.core.GrantedAuthority
@@ -69,6 +70,12 @@ class WebSecurityConfiguration @Autowired constructor(val userRepository: UserRe
     @Bean
     override fun authenticationManagerBean(): AuthenticationManager {
         return super.authenticationManagerBean()
+    }
+
+    override fun configure(httpSecurity: HttpSecurity?) {
+        httpSecurity
+                ?.authorizeRequests()
+                ?.antMatchers("/health-check")?.permitAll()
     }
 
 }

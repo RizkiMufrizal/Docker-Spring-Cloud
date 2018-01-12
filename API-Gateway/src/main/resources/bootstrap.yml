@@ -7,7 +7,3 @@ spring:
       discovery:
         enabled: true
         service-id: configuration-server
-eureka:
-  client:
-    service-url:
-      defaultZone: http://discovery1:10001/eureka/,http://discovery2:10002/eureka/
