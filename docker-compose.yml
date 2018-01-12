@@ -18,7 +18,7 @@ services:
     image: consul:latest
     command: |
       sh -c 'sleep 20 && set -uex; \
-         consul kv put -http-addr=http://consul:8500 config/init /consul/json/@basic_config.json'
+         consul kv put -http-addr=http://consul:8500 rizki/nama oke'
     volumes:
       - './basic_config.json:/consul/json/basic_config.json'
 
