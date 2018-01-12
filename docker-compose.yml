@@ -8,7 +8,7 @@ services:
       - "8600:8600"
     command: "agent -server -bootstrap-expect=1 -data-dir /consul/data -config-dir /consul/config -node=agent-one -enable-script-checks=true -ui -disable-host-node-id -client 0.0.0.0"
     volumes: 
-      - 'consul_data_1:/consul/data'
+      - '/tmp/consul_data_1:/consul/data'
       - './basic_config.json:/consul/config/basic_config.json'
     networks: 
       main:
