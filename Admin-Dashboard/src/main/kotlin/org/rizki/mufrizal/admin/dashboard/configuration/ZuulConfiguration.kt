@@ -1,11 +1,9 @@
 package org.rizki.mufrizal.admin.dashboard.configuration
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.env.Environment
-
 
 /**
  *
@@ -20,7 +18,6 @@ import org.springframework.core.env.Environment
  */
 
 @Configuration
-@EnableZuulProxy
 class ZuulConfiguration @Autowired constructor(val environment: Environment) {
 
     @Bean
