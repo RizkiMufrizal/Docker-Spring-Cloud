@@ -55,6 +55,81 @@
         "value": "dHJ1ZQ=="
     },
     {
+        "key": "config/oauth2/spring/datasource/driver-class-name",
+        "flags": 0,
+        "value": "Y29tLm15c3FsLmpkYmMuRHJpdmVy"
+    },
+    {
+        "key": "config/oauth2/spring/datasource/url",
+        "flags": 0,
+        "value": "amRiYzpteXNxbDovL21hcmlhZGJvYXV0aDI6MzMwNi9kYl9vYXV0aDI/YXV0b1JlY29ubmVjdD10cnVl"
+    },
+    {
+        "key": "config/oauth2/spring/datasource/username",
+        "flags": 0,
+        "value": "bWFyaWFkYm9hdXRoMg=="
+    },
+    {
+        "key": "config/oauth2/spring/datasource/password",
+        "flags": 0,
+        "value": "bWFyaWFkYm9hdXRoMg=="
+    },
+    {
+        "key": "config/oauth2/spring/datasource/poolName",
+        "flags": 0,
+        "value": "U3ByaW5nQm9vdEhpa2FyaUNQ"
+    },
+    {
+        "key": "config/oauth2/spring/datasource/maximumPoolSize",
+        "flags": 0,
+        "value": "NQ=="
+    },
+    {
+        "key": "config/oauth2/spring/datasource/minimumIdle",
+        "flags": 0,
+        "value": "Mw=="
+    },
+    {
+        "key": "config/oauth2/spring/datasource/maxLifetime",
+        "flags": 0,
+        "value": "MjAwMDAwMA=="
+    },
+    {
+        "key": "config/oauth2/spring/datasource/connectionTimeout",
+        "flags": 0,
+        "value": "MzAwMDA="
+    },
+    {
+        "key": "config/oauth2/spring/datasource/idleTimeout",
+        "flags": 0,
+        "value": "MzAwMDA="
+    },
+    {
+        "key": "config/oauth2/spring/jpa/generate-ddl",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/oauth2/spring/jpa/show-sql",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/oauth2/spring/jpa/hibernate/ddl-auto",
+        "flags": 0,
+        "value": "dXBkYXRl"
+    },
+    {
+        "key": "config/oauth2/spring/jpa/properties/hibernate/format_sql",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/oauth2/spring/jpa/database-platform",
+        "flags": 0,
+        "value": "b3JnLmhpYmVybmF0ZS5kaWFsZWN0Lk15U1FMNUlubm9EQkRpYWxlY3Q="
+    },
+    {
         "key": "config/oauth2/server/port",
         "flags": 0,
         "value": "ODA4OQ=="
