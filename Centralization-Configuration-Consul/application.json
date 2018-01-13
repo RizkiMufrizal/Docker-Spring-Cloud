@@ -7,7 +7,7 @@
     {
         "key": "configuration/application/spring/jackson/serialization/indent_output",
         "flags": 0,
-        "value": true
+        "value": "true"
     },
     {
         "key": "configuration/application/spring/cloud/consul/host",
@@ -17,7 +17,7 @@
     {
         "key": "configuration/application/spring/cloud/consul/port",
         "flags": 0,
-        "value": 8500
+        "value": "8500"
     },
     {
         "key": "configuration/application/spring/cloud/consul/discovery/healthCheckPath",

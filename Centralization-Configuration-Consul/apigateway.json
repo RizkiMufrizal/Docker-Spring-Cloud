@@ -2,7 +2,7 @@
     {
         "key": "configuration/apigateway/spring/oauth2/resource/filter-order",
         "flags": 0,
-        "value": 3
+        "value": "3"
     },
     {
         "key": "configuration/apigateway/spring/redis/host",
@@ -12,7 +12,7 @@
     {
         "key": "configuration/apigateway/spring/redis/port",
         "flags": 0,
-        "value": 6379
+        "value": "6379"
     },
     {
         "key": "configuration/apigateway/spring/redis/password",
@@ -22,42 +22,42 @@
     {
         "key": "configuration/apigateway/spring/redis/max-total",
         "flags": 0,
-        "value": 128
+        "value": "128"
     },
     {
         "key": "configuration/apigateway/spring/redis/max-idle",
         "flags": 0,
-        "value": 128
+        "value": "128"
     },
     {
         "key": "configuration/apigateway/spring/redis/min-idle",
         "flags": 0,
-        "value": 16
+        "value": "16"
     },
     {
         "key": "configuration/apigateway/spring/redis/min-evictable-idle-time-millis",
         "flags": 0,
-        "value": 60
+        "value": "60"
     },
     {
         "key": "configuration/apigateway/spring/redis/time-between-eviction-runs-millis",
         "flags": 0,
-        "value": 30
+        "value": "30"
     },
     {
         "key": "configuration/apigateway/spring/redis/block-when-exhausted",
         "flags": 0,
-        "value": true
+        "value": "true"
     },
     {
         "key": "configuration/apigateway/spring/redis/use-pool",
         "flags": 0,
-        "value": true
+        "value": "true"
     },
     {
         "key": "configuration/apigateway/server/port",
         "flags": 0,
-        "value": 8080
+        "value": "8080"
     },
     {
         "key": "configuration/apigateway/zuul/prefix",
@@ -112,26 +112,26 @@
     {
         "key": "configuration/apigateway/hystrix/command/default/execution/isolation/thread/timeoutInMilliseconds",
         "flags": 0,
-        "value": 30000
+        "value": "30000"
     },
     {
         "key": "configuration/apigateway/oauth2/ribbon/ReadTimeout",
         "flags": 0,
-        "value": 30000
+        "value": "30000"
     },
     {
         "key": "configuration/apigateway/catalog/ribbon/ReadTimeout",
         "flags": 0,
-        "value": 30000
+        "value": "30000"
     },
     {
         "key": "configuration/apigateway/transaction/ribbon/ReadTimeout",
         "flags": 0,
-        "value": 30000
+        "value": "30000"
     },
     {
         "key": "configuration/apigateway/management/security/enabled",
         "flags": 0,
-        "value": false
+        "value": "false"
     }
 ]
