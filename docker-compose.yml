@@ -1,6 +1,7 @@
 version: '3'
 services: 
   consul:
+    container_name: consul
     image: consul:latest
     ports:
       - "8400:8400"
@@ -23,6 +24,16 @@ services:
       main:
         aliases: 
           - consul
+
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin:latest
+    ports:
+      - "9411:9411"
+    networks: 
+      main:
+        aliases: 
+          - zipkin
 
   postgrescatalog:
     container_name: postgrescatalog

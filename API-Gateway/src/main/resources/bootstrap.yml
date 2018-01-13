@@ -12,3 +12,11 @@ spring:
       config:
         enabled: true
         fail-fast: true
+  sleuth:
+    log:
+      json:
+        enabled: true
+    sampler:
+      percentage: 1
+  zipkin:
+    baseUrl: http://zipkin:9411/
