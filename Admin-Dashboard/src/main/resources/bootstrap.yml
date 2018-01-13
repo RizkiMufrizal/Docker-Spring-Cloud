@@ -18,5 +18,5 @@ spring:
         metadata:
           user.name: actuator
           user.password: actuator
-server:
-  port: 8181
+      discovery:
+        ignored-services: consul
