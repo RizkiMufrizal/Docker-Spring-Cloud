@@ -1,63 +1,72 @@
-{
-    "configuration": {
-        "oauth2": {
-            "spring": {
-                "oauth2": {
-                    "resource": {
-                        "filter-order": 3
-                    }
-                },
-                "redis": {
-                    "host": "redissessionoauth2",
-                    "port": 6379,
-                    "password": "redissessionoauth2",
-                    "max-total": 128,
-                    "max-idle": 128,
-                    "min-idle": 16,
-                    "min-evictable-idle-time-millis": 60,
-                    "time-between-eviction-runs-millis": 30,
-                    "block-when-exhausted": true,
-                    "use-pool": true
-                },
-                "datasource": {
-                    "driver-class-name": "com.mysql.jdbc.Driver",
-                    "url": "jdbc:mysql://mariadboauth2:3306/db_oauth2?autoReconnect=true",
-                    "username": "mariadboauth2",
-                    "password": "mariadboauth2",
-                    "poolName": "SpringBootHikariCP",
-                    "maximumPoolSize": 5,
-                    "minimumIdle": 3,
-                    "maxLifetime": 2000000,
-                    "connectionTimeout": 30000,
-                    "idleTimeout": 30000
-                },
-                "jpa": {
-                    "generate-ddl": true,
-                    "show-sql": true,
-                    "hibernate": {
-                        "ddl-auto": "update"
-                    },
-                    "properties": {
-                        "hibernate": {
-                            "format_sql": true
-                        }
-                    },
-                    "database-platform": "org.hibernate.dialect.MySQL5InnoDBDialect"
-                }
-            },
-            "server": {
-                "port": 8089
-            },
-            "management": {
-                "security": {
-                    "enabled": true
-                }
-            },
-            "security": {
-                "basic": {
-                    "enabled": true
-                }
-            }
-        }
+[
+    {
+        "key": "config/oauth2/spring/oauth2/resource/filter-order",
+        "flags": 0,
+        "value": "Mw=="
+    },
+    {
+        "key": "config/oauth2/spring/redis/host",
+        "flags": 0,
+        "value": "cmVkaXNzZXNzaW9ub2F1dGgy"
+    },
+    {
+        "key": "config/oauth2/spring/redis/port",
+        "flags": 0,
+        "value": "NjM3OQ=="
+    },
+    {
+        "key": "config/oauth2/spring/redis/password",
+        "flags": 0,
+        "value": "cmVkaXNzZXNzaW9ub2F1dGgy"
+    },
+    {
+        "key": "config/oauth2/spring/redis/max-total",
+        "flags": 0,
+        "value": "MTI4"
+    },
+    {
+        "key": "config/oauth2/spring/redis/max-idle",
+        "flags": 0,
+        "value": "MTI4"
+    },
+    {
+        "key": "config/oauth2/spring/redis/min-idle",
+        "flags": 0,
+        "value": "MTY="
+    },
+    {
+        "key": "config/oauth2/spring/redis/min-evictable-idle-time-millis",
+        "flags": 0,
+        "value": "NjA="
+    },
+    {
+        "key": "config/oauth2/spring/redis/time-between-eviction-runs-millis",
+        "flags": 0,
+        "value": "MzA="
+    },
+    {
+        "key": "config/oauth2/spring/redis/block-when-exhausted",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/oauth2/spring/redis/use-pool",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/oauth2/server/port",
+        "flags": 0,
+        "value": "ODA4OQ=="
+    },
+    {
+        "key": "config/oauth2/management/security/enabled",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/oauth2/ecurity/basic/enabled",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
     }
-}
+]

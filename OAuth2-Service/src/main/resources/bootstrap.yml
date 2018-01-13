@@ -11,5 +11,4 @@ spring:
         prefer-ip-address: true
       config:
         enabled: true
-        prefix: configuration
         fail-fast: true

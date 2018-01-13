@@ -1,20 +1,22 @@
-{
-	"configuration": {
-		"transaction": {
-			"spring": {
-				"data": {
-					"mongodb": {
-						"database": "mongotransaction",
-						"host": "mongotransaction",
-						"port": 27017
-					}
-				}
-			},
-			"management": {
-				"security": {
-					"enabled": false
-				}
-			}
-		}
+[
+	{
+		"key": "config/transaction/spring/data/mongodb/database",
+		"flags": 0,
+		"value": "bW9uZ290cmFuc2FjdGlvbg=="
+	},
+	{
+		"key": "config/transaction/spring/data/mongodb/host",
+		"flags": 0,
+		"value": "bW9uZ290cmFuc2FjdGlvbg=="
+	},
+	{
+		"key": "config/transaction/spring/data/mongodb/port",
+		"flags": 0,
+		"value": "MjcwMTc="
+	},
+	{
+		"key": "config/transaction/management/security/enabled",
+		"flags": 0,
+		"value": "ZmFsc2U="
 	}
-}
+]

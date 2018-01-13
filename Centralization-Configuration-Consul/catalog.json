@@ -1,38 +1,82 @@
-{
-    "configuration": {
-        "catalog": {
-            "spring": {
-                "datasource": {
-                    "driver-class-name": "org.postgresql.Driver",
-                    "url": "jdbc:postgresql://postgrescatalog:5432/db_catalog?autoReconnect=true",
-                    "username": "postgrescatalog",
-                    "password": "postgrescatalog",
-                    "poolName": "SpringBootHikariCP",
-                    "maximumPoolSize": 5,
-                    "minimumIdle": 3,
-                    "maxLifetime": 2000000,
-                    "connectionTimeout": 30000,
-                    "idleTimeout": 30000
-                },
-                "jpa": {
-                    "generate-ddl": true,
-                    "show-sql": true,
-                    "hibernate": {
-                        "ddl-auto": "update"
-                    },
-                    "properties": {
-                        "hibernate": {
-                            "format_sql": true
-                        }
-                    },
-                    "database-platform": "org.hibernate.dialect.PostgreSQL9Dialect"
-                }
-            },
-            "management": {
-                "security": {
-                    "enabled": false
-                }
-            }
-        }
+[
+    {
+        "key": "config/catalog/spring/datasource/driver-class-name",
+        "flags": 0,
+        "value": "b3JnLnBvc3RncmVzcWwuRHJpdmVy"
+    },
+    {
+        "key": "config/catalog/spring/datasource/url",
+        "flags": 0,
+        "value": "amRiYzpwb3N0Z3Jlc3FsOi8vcG9zdGdyZXNjYXRhbG9nOjU0MzIvZGJfY2F0YWxvZz9hdXRvUmVjb25uZWN0PXRydWU="
+    },
+    {
+        "key": "config/catalog/spring/datasource/username",
+        "flags": 0,
+        "value": "cG9zdGdyZXNjYXRhbG9n"
+    },
+    {
+        "key": "config/catalog/spring/datasource/password",
+        "flags": 0,
+        "value": "cG9zdGdyZXNjYXRhbG9n"
+    },
+    {
+        "key": "config/catalog/spring/datasource/poolName",
+        "flags": 0,
+        "value": "U3ByaW5nQm9vdEhpa2FyaUNQ"
+    },
+    {
+        "key": "config/catalog/spring/datasource/maximumPoolSize",
+        "flags": 0,
+        "value": "NQ=="
+    },
+    {
+        "key": "config/catalog/spring/datasource/minimumIdle",
+        "flags": 0,
+        "value": "Mw=="
+    },
+    {
+        "key": "config/catalog/spring/datasource/maxLifetime",
+        "flags": 0,
+        "value": "MjAwMDAwMA=="
+    },
+    {
+        "key": "config/catalog/spring/datasource/connectionTimeout",
+        "flags": 0,
+        "value": "MzAwMDA="
+    },
+    {
+        "key": "config/catalog/spring/datasource/idleTimeout",
+        "flags": 0,
+        "value": "MzAwMDA="
+    },
+    {
+        "key": "config/catalog/spring/jpa/generate-ddl",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/catalog/spring/jpa/show-sql",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/catalog/spring/jpa/hibernate/ddl-auto",
+        "flags": 0,
+        "value": "dXBkYXRl"
+    },
+    {
+        "key": "config/catalog/spring/jpa/properties/hibernate/format_sql",
+        "flags": 0,
+        "value": "dHJ1ZQ=="
+    },
+    {
+        "key": "config/catalog/spring/jpa/database-platform",
+        "flags": 0,
+        "value": "b3JnLmhpYmVybmF0ZS5kaWFsZWN0LlBvc3RncmVTUUw5RGlhbGVjdA=="
+    },
+    {
+        "key": "config/catalog/management/security/enabled",
+        "flags": 0,
+        "value": "ZmFsc2U="
     }
-}
+]
