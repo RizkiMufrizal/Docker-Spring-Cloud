@@ -23,9 +23,6 @@ spring:
             password: actuator
       discovery:
         ignored-services: consul
-      turbine:
-        clusters: default
-        location: turbine
 management:
   security:
     enabled: false
