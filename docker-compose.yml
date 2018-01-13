@@ -9,7 +9,7 @@ services:
     command: |
       sh -c 'set -uex; \
         consul agent -server -bootstrap-expect=1 -data-dir /consul/data -node=agent-one -enable-script-checks=true -ui -disable-host-node-id -client 0.0.0.0 &;\
-        sleep 20 && consul kv put rizki/nama oke'
+        sleep 20 && consul kv put rizki/nama oke && tail -f /dev/null'
     volumes: 
       - '/tmp/consul_data_1:/consul/data'
     networks: 
