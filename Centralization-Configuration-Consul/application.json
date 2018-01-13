@@ -1,27 +1,30 @@
-{
-    "configuration": {
-        "application": {
-            "server": {
-                "port": "${PORT:0}"
-            },
-            "spring": {
-                "jackson": {
-                    "serialization": {
-                        "indent_output": true
-                    }
-                },
-                "cloud": {
-                    "consul": {
-                        "host": "consul",
-                        "port": 8500,
-                        "discovery": {
-                            "healthCheckPath": "/health-check",
-                            "healthCheckInterval": "20s",
-                            "instanceId": "${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}"
-                        }
-                    }
-                }
-            }
-        }
+[
+    {
+        "key": "configuration.application.server.port",
+        "value": "${PORT:0}"
+    },
+    {
+        "key": "configuration.application.spring.jackson.serialization.indent_output",
+        "value": true
+    },
+    {
+        "key": "configuration.application.spring.cloud.consul.host",
+        "value": "consul"
+    },
+    {
+        "key": "configuration.application.spring.cloud.consul.port",
+        "value": 8500
+    },
+    {
+        "key": "configuration.application.spring.cloud.consul.discovery.healthCheckPath",
+        "value": "/health-check"
+    },
+    {
+        "key": "configuration.application.spring.cloud.consul.discovery.healthCheckInterval",
+        "value": "20s"
+    },
+    {
+        "key": "configuration.application.spring.cloud.consul.discovery.instanceId",
+        "value": "${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}"
     }
-}
+]

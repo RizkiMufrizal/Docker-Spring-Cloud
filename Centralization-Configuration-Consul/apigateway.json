@@ -1,81 +1,110 @@
-{
-    "configuration": {
-        "apigateway": {
-            "spring": {
-                "oauth2": {
-                    "resource": {
-                        "filter-order": 3
-                    }
-                },
-                "redis": {
-                    "host": "redissessionoauth2",
-                    "port": 6379,
-                    "password": "redissessionoauth2",
-                    "max-total": 128,
-                    "max-idle": 128,
-                    "min-idle": 16,
-                    "min-evictable-idle-time-millis": 60,
-                    "time-between-eviction-runs-millis": 30,
-                    "block-when-exhausted": true,
-                    "use-pool": true
-                }
-            },
-            "server": {
-                "port": 8080
-            },
-            "zuul": {
-                "prefix": "/v1",
-                "routes": {
-                    "oauth2": {
-                        "path": "/api/**",
-                        "sensitiveHeaders": "Cookie,Set-Cookie",
-                        "serviceId": "oauth2"
-                    },
-                    "catalog": {
-                        "path": "/catalog/**",
-                        "sensitiveHeaders": "Cookie,Set-Cookie",
-                        "serviceId": "catalog"
-                    },
-                    "transaction": {
-                        "path": "/transaction/**",
-                        "sensitiveHeaders": "Cookie,Set-Cookie",
-                        "serviceId": "transaction"
-                    }
-                }
-            },
-            "hystrix": {
-                "command": {
-                    "default": {
-                        "execution": {
-                            "isolation": {
-                                "thread": {
-                                    "timeoutInMilliseconds": 30000
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "oauth2": {
-                "ribbon": {
-                    "ReadTimeout": 30000
-                }
-            },
-            "catalog": {
-                "ribbon": {
-                    "ReadTimeout": 30000
-                }
-            },
-            "transaction": {
-                "ribbon": {
-                    "ReadTimeout": 30000
-                }
-            },
-            "management": {
-                "security": {
-                    "enabled": false
-                }
-            }
-        }
+[
+    {
+        "key": "configuration/apigateway/spring/oauth2/resource/filter-order",
+        "value": 3
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/host",
+        "value": "redissessionoauth2"
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/port",
+        "value": 6379
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/password",
+        "value": "redissessionoauth2"
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/max-total",
+        "value": 128
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/max-idle",
+        "value": 128
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/min-idle",
+        "value": 16
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/min-evictable-idle-time-millis",
+        "value": 60
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/time-between-eviction-runs-millis",
+        "value": 30
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/block-when-exhausted",
+        "value": true
+    },
+    {
+        "key": "configuration/apigateway/spring/redis/use-pool",
+        "value": true
+    },
+    {
+        "key": "configuration/apigateway/server/port",
+        "value": 8080
+    },
+    {
+        "key": "configuration/apigateway/zuul/prefix",
+        "value": "/v1"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/oauth2/path",
+        "value": "/api/**"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/oauth2/sensitiveHeaders",
+        "value": "Cookie,Set-Cookie"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/oauth2/serviceId",
+        "value": "oauth2"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/catalog/path",
+        "value": "/catalog/**"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/catalog/sensitiveHeaders",
+        "value": "Cookie,Set-Cookie"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/catalog/serviceId",
+        "value": "catalog"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/transaction/path",
+        "value": "/transaction/**"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/transaction/sensitiveHeaders",
+        "value": "Cookie,Set-Cookie"
+    },
+    {
+        "key": "configuration/apigateway/zuul/routes/transaction/serviceId",
+        "value": "transaction"
+    },
+    {
+        "key": "configuration/apigateway/hystrix/command/default/execution/isolation/thread/timeoutInMilliseconds",
+        "value": 30000
+    },
+    {
+        "key": "configuration/apigateway/oauth2/ribbon/ReadTimeout",
+        "value": 30000
+    },
+    {
+        "key": "configuration/apigateway/catalog/ribbon/ReadTimeout",
+        "value": 30000
+    },
+    {
+        "key": "configuration/apigateway/transaction/ribbon/ReadTimeout",
+        "value": 30000
+    },
+    {
+        "key": "configuration/apigateway/management/security/enabled",
+        "value": false
     }
-}
+]
