@@ -48,7 +48,7 @@ class OAuth2ServiceApplication : CommandLineRunner {
                     username = "actuator",
                     password = BCryptPasswordEncoder().encode("actuator"),
                     isActive = true,
-                    roles = setOf("ACTUATOR")
+                    roles = setOf("ACTUATOR", "ROLE_MANAGE")
             ))
         }
 
