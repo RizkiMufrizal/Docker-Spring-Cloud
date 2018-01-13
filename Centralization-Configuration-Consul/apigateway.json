@@ -1,77 +1,81 @@
 {
-    "spring": {
-        "oauth2": {
-            "resource": {
-                "filter-order": 3
-            }
-        },
-        "redis": {
-            "host": "redissessionoauth2",
-            "port": 6379,
-            "password": "redissessionoauth2",
-            "max-total": 128,
-            "max-idle": 128,
-            "min-idle": 16,
-            "min-evictable-idle-time-millis": 60,
-            "time-between-eviction-runs-millis": 30,
-            "block-when-exhausted": true,
-            "use-pool": true
-        }
-    },
-    "server": {
-        "port": 8080
-    },
-    "zuul": {
-        "prefix": "/v1",
-        "routes": {
-            "oauth2": {
-                "path": "/api/**",
-                "sensitiveHeaders": "Cookie,Set-Cookie",
-                "serviceId": "oauth2"
+    "configuration": {
+        "apigateway": {
+            "spring": {
+                "oauth2": {
+                    "resource": {
+                        "filter-order": 3
+                    }
+                },
+                "redis": {
+                    "host": "redissessionoauth2",
+                    "port": 6379,
+                    "password": "redissessionoauth2",
+                    "max-total": 128,
+                    "max-idle": 128,
+                    "min-idle": 16,
+                    "min-evictable-idle-time-millis": 60,
+                    "time-between-eviction-runs-millis": 30,
+                    "block-when-exhausted": true,
+                    "use-pool": true
+                }
             },
-            "catalog": {
-                "path": "/catalog/**",
-                "sensitiveHeaders": "Cookie,Set-Cookie",
-                "serviceId": "catalog"
+            "server": {
+                "port": 8080
             },
-            "transaction": {
-                "path": "/transaction/**",
-                "sensitiveHeaders": "Cookie,Set-Cookie",
-                "serviceId": "transaction"
-            }
-        }
-    },
-    "hystrix": {
-        "command": {
-            "default": {
-                "execution": {
-                    "isolation": {
-                        "thread": {
-                            "timeoutInMilliseconds": 30000
+            "zuul": {
+                "prefix": "/v1",
+                "routes": {
+                    "oauth2": {
+                        "path": "/api/**",
+                        "sensitiveHeaders": "Cookie,Set-Cookie",
+                        "serviceId": "oauth2"
+                    },
+                    "catalog": {
+                        "path": "/catalog/**",
+                        "sensitiveHeaders": "Cookie,Set-Cookie",
+                        "serviceId": "catalog"
+                    },
+                    "transaction": {
+                        "path": "/transaction/**",
+                        "sensitiveHeaders": "Cookie,Set-Cookie",
+                        "serviceId": "transaction"
+                    }
+                }
+            },
+            "hystrix": {
+                "command": {
+                    "default": {
+                        "execution": {
+                            "isolation": {
+                                "thread": {
+                                    "timeoutInMilliseconds": 30000
+                                }
+                            }
                         }
                     }
                 }
+            },
+            "oauth2": {
+                "ribbon": {
+                    "ReadTimeout": 30000
+                }
+            },
+            "catalog": {
+                "ribbon": {
+                    "ReadTimeout": 30000
+                }
+            },
+            "transaction": {
+                "ribbon": {
+                    "ReadTimeout": 30000
+                }
+            },
+            "management": {
+                "security": {
+                    "enabled": false
+                }
             }
-        }
-    },
-    "oauth2": {
-        "ribbon": {
-            "ReadTimeout": 30000
-        }
-    },
-    "catalog": {
-        "ribbon": {
-            "ReadTimeout": 30000
-        }
-    },
-    "transaction": {
-        "ribbon": {
-            "ReadTimeout": 30000
-        }
-    },
-    "management": {
-        "security": {
-            "enabled": false
         }
     }
 }

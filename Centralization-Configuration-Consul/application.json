@@ -1,21 +1,25 @@
 {
-    "server": {
-        "port": "${PORT:0}"
-    },
-    "spring": {
-        "jackson": {
-            "serialization": {
-                "indent_output": true
-            }
-        },
-        "cloud": {
-            "consul": {
-                "host": "consul",
-                "port": 8500,
-                "discovery": {
-                    "healthCheckPath": "/health-check",
-                    "healthCheckInterval": "20s",
-                    "instanceId": "${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}"
+    "configuration": {
+        "application": {
+            "server": {
+                "port": "${PORT:0}"
+            },
+            "spring": {
+                "jackson": {
+                    "serialization": {
+                        "indent_output": true
+                    }
+                },
+                "cloud": {
+                    "consul": {
+                        "host": "consul",
+                        "port": 8500,
+                        "discovery": {
+                            "healthCheckPath": "/health-check",
+                            "healthCheckInterval": "20s",
+                            "instanceId": "${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}"
+                        }
+                    }
                 }
             }
         }

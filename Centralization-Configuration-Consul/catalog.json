@@ -1,34 +1,38 @@
 {
-    "spring": {
-        "datasource": {
-            "driver-class-name": "org.postgresql.Driver",
-            "url": "jdbc:postgresql://postgrescatalog:5432/db_catalog?autoReconnect=true",
-            "username": "postgrescatalog",
-            "password": "postgrescatalog",
-            "poolName": "SpringBootHikariCP",
-            "maximumPoolSize": 5,
-            "minimumIdle": 3,
-            "maxLifetime": 2000000,
-            "connectionTimeout": 30000,
-            "idleTimeout": 30000
-        },
-        "jpa": {
-            "generate-ddl": true,
-            "show-sql": true,
-            "hibernate": {
-                "ddl-auto": "update"
-            },
-            "properties": {
-                "hibernate": {
-                    "format_sql": true
+    "configuration": {
+        "catalog": {
+            "spring": {
+                "datasource": {
+                    "driver-class-name": "org.postgresql.Driver",
+                    "url": "jdbc:postgresql://postgrescatalog:5432/db_catalog?autoReconnect=true",
+                    "username": "postgrescatalog",
+                    "password": "postgrescatalog",
+                    "poolName": "SpringBootHikariCP",
+                    "maximumPoolSize": 5,
+                    "minimumIdle": 3,
+                    "maxLifetime": 2000000,
+                    "connectionTimeout": 30000,
+                    "idleTimeout": 30000
+                },
+                "jpa": {
+                    "generate-ddl": true,
+                    "show-sql": true,
+                    "hibernate": {
+                        "ddl-auto": "update"
+                    },
+                    "properties": {
+                        "hibernate": {
+                            "format_sql": true
+                        }
+                    },
+                    "database-platform": "org.hibernate.dialect.PostgreSQL9Dialect"
                 }
             },
-            "database-platform": "org.hibernate.dialect.PostgreSQL9Dialect"
-        }
-    },
-    "management": {
-        "security": {
-            "enabled": false
+            "management": {
+                "security": {
+                    "enabled": false
+                }
+            }
         }
     }
 }

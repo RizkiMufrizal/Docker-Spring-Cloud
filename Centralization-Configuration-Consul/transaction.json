@@ -1,16 +1,20 @@
 {
-	"spring": {
-		"data": {
-			"mongodb": {
-				"database": "mongotransaction",
-				"host": "mongotransaction",
-				"port": 27017
+	"configuration": {
+		"transaction": {
+			"spring": {
+				"data": {
+					"mongodb": {
+						"database": "mongotransaction",
+						"host": "mongotransaction",
+						"port": 27017
+					}
+				}
+			},
+			"management": {
+				"security": {
+					"enabled": false
+				}
 			}
-		}
-	},
-	"management": {
-		"security": {
-			"enabled": false
 		}
 	}
 }
