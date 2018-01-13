@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: admindashboard
+  cloud:
+    consul:
+      host: consul
+      port: 8500
+      discovery:
+        healthCheckPath: /health-check
+        healthCheckInterval: 20s
+        prefer-ip-address: true
+  boot:
+    admin:
+      client:
+        metadata:
+          user.name: actuator
+          user.password: actuator
+      discovery:
+        ignored-services: consul
+server:
+  port: 8181
