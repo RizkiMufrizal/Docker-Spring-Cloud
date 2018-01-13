@@ -9,22 +9,16 @@ services:
     command: |
       sh -c 'set -uex; \
         consul agent -server -bootstrap-expect=1 -data-dir /consul/data -node=agent-one -enable-script-checks=true -ui -disable-host-node-id -client 0.0.0.0 & \
-        sleep 20 && consul kv put rizki/nama oke && tail -f /dev/null'
+        sleep 20 && \ 
+        consul kv put configuration/apigateway /consul/Centralization-Configuration-Consul/@apigateway && \ 
+        tail -f /dev/null'
     volumes: 
       - '/tmp/consul_data_1:/consul/data'
+      - './Centralization-Configuration-Consul:/consul/Centralization-Configuration-Consul'
     networks: 
       main:
         aliases: 
           - consul
-
-  configurationserver:
-    command: bash -c 'java -jar /app.jar'
-    container_name: configurationserver
-    image: org.rizki.mufrizal.configuration.server/configuration-server
-    networks: 
-      main:
-        aliases: 
-          - configurationserver
 
   postgrescatalog:
     container_name: postgrescatalog

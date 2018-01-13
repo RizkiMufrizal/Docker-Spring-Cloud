@@ -9,8 +9,7 @@ spring:
         healthCheckPath: /health-check
         healthCheckInterval: 20s
         prefer-ip-address: true
-    config:
-      fail-fast: true
-      discovery:
+      config:
         enabled: true
-        service-id: configuration-server
+        prefix: configuration
+        fail-fast: true
