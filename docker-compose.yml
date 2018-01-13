@@ -9,7 +9,13 @@ services:
     command: |
       sh -c 'set -uex; \
         consul agent -server -bootstrap-expect=1 -data-dir /consul/data -node=agent-one -enable-script-checks=true -ui -disable-host-node-id -client 0.0.0.0 & \
-        sleep 20 && consul kv put configuration/apigateway @/consul/Centralization-Configuration-Consul/apigateway.json && tail -f /dev/null'
+        sleep 20 && \
+        consul kv put configuration/application/apigateway @/consul/Centralization-Configuration-Consul/apigateway.json && \
+        consul kv put configuration/application @/consul/Centralization-Configuration-Consul/application.json && \
+        consul kv put configuration/application/catalog @/consul/Centralization-Configuration-Consul/catalog.json && \
+        consul kv put configuration/application/oauth2 @/consul/Centralization-Configuration-Consul/oauth2.json && \
+        consul kv put configuration/application/transaction @/consul/Centralization-Configuration-Consul/transaction.json && \
+        tail -f /dev/null'
     volumes: 
       - '/tmp/consul_data_1:/consul/data'
       - './Centralization-Configuration-Consul:/consul/Centralization-Configuration-Consul'
@@ -48,7 +54,7 @@ services:
           - mongotransaction
 
   transactionservice:
-    command: bash -c 'sleep 120 && java -jar /app.jar'
+    command: bash -c 'sleep 60 && java -jar /app.jar'
     container_name: transactionservice
     image: org.rizki.mufrizal.transaction.service/transaction-service
     networks: 
@@ -80,7 +86,7 @@ services:
           - redissessionoauth2
 
   oauth2service:
-    command: bash -c 'sleep 120 && java -jar /app.jar'
+    command: bash -c 'sleep 60 && java -jar /app.jar'
     container_name: oauth2service
     image: org.rizki.mufrizal.oauth2.service/oauth2-service
     networks: 
@@ -89,7 +95,7 @@ services:
           - oauth2service
 
   apigateway:
-    command: bash -c 'sleep 120 && java -jar /app.jar'
+    command: bash -c 'sleep 60 && java -jar /app.jar'
     container_name: apigateway
     image: org.rizki.mufrizal.api.gateway/api-gateway
     ports: 
