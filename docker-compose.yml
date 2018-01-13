@@ -12,9 +12,6 @@ services:
         sleep 20 && \
         consul kv import @/consul/Centralization-Configuration-Consul/apigateway.json && \
         consul kv import @/consul/Centralization-Configuration-Consul/application.json && \
-        consul kv import @/consul/Centralization-Configuration-Consul/catalog.json && \
-        consul kv import @/consul/Centralization-Configuration-Consul/oauth2.json && \
-        consul kv import @/consul/Centralization-Configuration-Consul/transaction.json && \
         tail -f /dev/null'
     volumes: 
       - '/tmp/consul_data_1:/consul/data'

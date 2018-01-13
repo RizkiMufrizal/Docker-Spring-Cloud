@@ -1,30 +1,37 @@
 [
     {
-        "key": "configuration.application.server.port",
+        "key": "configuration/application/server/port",
+        "flags": 0,
         "value": "${PORT:0}"
     },
     {
-        "key": "configuration.application.spring.jackson.serialization.indent_output",
+        "key": "configuration/application/spring/jackson/serialization/indent_output",
+        "flags": 0,
         "value": true
     },
     {
-        "key": "configuration.application.spring.cloud.consul.host",
+        "key": "configuration/application/spring/cloud/consul/host",
+        "flags": 0,
         "value": "consul"
     },
     {
-        "key": "configuration.application.spring.cloud.consul.port",
+        "key": "configuration/application/spring/cloud/consul/port",
+        "flags": 0,
         "value": 8500
     },
     {
-        "key": "configuration.application.spring.cloud.consul.discovery.healthCheckPath",
+        "key": "configuration/application/spring/cloud/consul/discovery/healthCheckPath",
+        "flags": 0,
         "value": "/health-check"
     },
     {
-        "key": "configuration.application.spring.cloud.consul.discovery.healthCheckInterval",
+        "key": "configuration/application/spring/cloud/consul/discovery/healthCheckInterval",
+        "flags": 0,
         "value": "20s"
     },
     {
-        "key": "configuration.application.spring.cloud.consul.discovery.instanceId",
+        "key": "configuration/application/spring/cloud/consul/discovery/instanceId",
+        "flags": 0,
         "value": "${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}"
     }
 ]
