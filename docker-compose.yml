@@ -116,5 +116,16 @@ services:
         aliases: 
           - apigateway
 
+  admindashboard:
+    command: bash -c 'sleep 100 && java -jar /app.jar'
+    container_name: admindashboard
+    image: org.rizki.mufrizal.admin.dashboard/admin-dashboard
+    ports: 
+      - 8181:8181
+    networks: 
+      main:
+        aliases: 
+          - admindashboard
+
 networks: 
   main:
