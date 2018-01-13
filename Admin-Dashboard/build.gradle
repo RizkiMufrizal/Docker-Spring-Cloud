@@ -1,22 +1,22 @@
 buildscript {
-	ext {
-		kotlinVersion = '1.2.10'
-		springBootVersion = '1.5.9.RELEASE'
-		gradleDockerPlugin = '0.13.0'
-		springBootAdmin = '1.5.6'
-	}
-	repositories {
-		maven {
+    ext {
+        kotlinVersion = '1.2.10'
+        springBootVersion = '1.5.9.RELEASE'
+        gradleDockerPlugin = '0.13.0'
+        springBootAdmin = '1.5.6'
+    }
+    repositories {
+        maven {
             url "https://plugins.gradle.org/m2/"
         }
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-		classpath("gradle.plugin.com.palantir.gradle.docker:gradle-docker:${gradleDockerPlugin}")
-	}
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
+        classpath("gradle.plugin.com.palantir.gradle.docker:gradle-docker:${gradleDockerPlugin}")
+    }
 }
 
 apply plugin: 'kotlin'
@@ -41,14 +41,14 @@ docker {
 }
 
 compileKotlin {
-	kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "1.8"
 }
 compileTestKotlin {
-	kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 ext {
@@ -56,13 +56,14 @@ ext {
 }
 
 dependencies {
-	compile('org.springframework.cloud:spring-cloud-starter-consul-config')
+    compile('org.springframework.cloud:spring-cloud-starter-consul-config')
     compile('org.springframework.cloud:spring-cloud-starter-consul-all')
-	compile('org.springframework.boot:spring-boot-starter-actuator')
-	compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
-	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
-	compile("de.codecentric:spring-boot-admin-server:${springBootAdmin}")
-	compile("de.codecentric:spring-boot-admin-server-ui:${springBootAdmin}")
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
+    compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+    compile("de.codecentric:spring-boot-admin-server:${springBootAdmin}")
+    compile("de.codecentric:spring-boot-admin-server-ui:${springBootAdmin}")
 }
 
 dependencyManagement {
