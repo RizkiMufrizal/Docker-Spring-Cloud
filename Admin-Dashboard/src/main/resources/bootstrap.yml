@@ -14,9 +14,15 @@ spring:
         fail-fast: true
   boot:
     admin:
+      routes:
+        endpoints: env,metrics,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
       client:
         metadata:
-          user.name: actuator
-          user.password: actuator
+          user:
+            name: actuator
+            password: actuator
       discovery:
         ignored-services: consul
+      turbine:
+        clusters: default
+        location: turbine
