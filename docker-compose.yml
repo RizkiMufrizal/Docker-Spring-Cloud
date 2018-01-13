@@ -117,7 +117,7 @@ services:
           - apigateway
 
   admindashboard:
-    command: bash -c 'sleep 100 && java -jar /app.jar'
+    command: bash -c 'sleep 20 && java -jar /app.jar'
     container_name: admindashboard
     image: org.rizki.mufrizal.admin.dashboard/admin-dashboard
     ports: 
