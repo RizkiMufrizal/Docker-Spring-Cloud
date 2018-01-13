@@ -66,6 +66,7 @@ dependencies {
     compile("de.codecentric:spring-boot-admin-server-ui:${springBootAdmin}")
     compile("de.codecentric:spring-boot-admin-server-ui-hystrix:${springBootAdmin}")
     compile("de.codecentric:spring-boot-admin-server-ui-turbine:${springBootAdmin}")
+    compile('org.springframework.cloud:spring-cloud-starter-hystrix')
 }
 
 dependencyManagement {

@@ -4,6 +4,7 @@ import de.codecentric.boot.admin.config.EnableAdminServer
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient
+import org.springframework.cloud.context.config.annotation.RefreshScope
 
 /**
  *
@@ -20,6 +21,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableAdminServer
+@RefreshScope
 class AdminDashboardApplication
 
 fun main(args: Array<String>) {

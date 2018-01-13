@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient
+import org.springframework.cloud.context.config.annotation.RefreshScope
 import java.math.BigDecimal
 import java.time.LocalDate
 
@@ -25,6 +26,7 @@ import java.time.LocalDate
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@RefreshScope
 class CatalogServiceApplication @Autowired constructor(val barangRepository: BarangRepository) : CommandLineRunner {
     override fun run(vararg args: String?) {
         barangRepository.deleteAll()
