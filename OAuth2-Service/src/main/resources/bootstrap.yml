@@ -12,6 +12,3 @@ spring:
       config:
         enabled: true
         fail-fast: true
-  boot:
-    admin:
-      url: http://admindashboard:8181

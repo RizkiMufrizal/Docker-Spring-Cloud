@@ -20,6 +20,3 @@ spring:
       percentage: 1
   zipkin:
     baseUrl: http://zipkin:9411/
-  boot:
-    admin:
-      url: http://admindashboard:8181

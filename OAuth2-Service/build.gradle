@@ -4,7 +4,6 @@ buildscript {
         springBootVersion = '1.5.9.RELEASE'
         gradleDockerPlugin = '0.13.0'
         commonsIo = '2.6'
-        springBootAdmin = '1.5.6'
     }
     repositories {
         maven {
@@ -57,7 +56,6 @@ ext {
 }
 
 dependencies {
-    compile("de.codecentric:spring-boot-admin-starter-client:${springBootAdmin}")
     compile('org.springframework.cloud:spring-cloud-starter-consul-config')
     compile('org.springframework.cloud:spring-cloud-starter-consul-all')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
