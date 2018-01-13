@@ -2,136 +2,136 @@
     {
         "key": "configuration/apigateway/spring/oauth2/resource/filter-order",
         "flags": 0,
-        "value": "3"
+        "value": "Mw=="
     },
     {
         "key": "configuration/apigateway/spring/redis/host",
         "flags": 0,
-        "value": "redissessionoauth2"
+        "value": "cmVkaXNzZXNzaW9ub2F1dGgy"
     },
     {
         "key": "configuration/apigateway/spring/redis/port",
         "flags": 0,
-        "value": "6379"
+        "value": "NjM3OQ=="
     },
     {
         "key": "configuration/apigateway/spring/redis/password",
         "flags": 0,
-        "value": "redissessionoauth2"
+        "value": "cmVkaXNzZXNzaW9ub2F1dGgy"
     },
     {
         "key": "configuration/apigateway/spring/redis/max-total",
         "flags": 0,
-        "value": "128"
+        "value": "MTI4"
     },
     {
         "key": "configuration/apigateway/spring/redis/max-idle",
         "flags": 0,
-        "value": "128"
+        "value": "MTI4"
     },
     {
         "key": "configuration/apigateway/spring/redis/min-idle",
         "flags": 0,
-        "value": "16"
+        "value": "MTY="
     },
     {
         "key": "configuration/apigateway/spring/redis/min-evictable-idle-time-millis",
         "flags": 0,
-        "value": "60"
+        "value": "NjA="
     },
     {
         "key": "configuration/apigateway/spring/redis/time-between-eviction-runs-millis",
         "flags": 0,
-        "value": "30"
+        "value": "MzA="
     },
     {
         "key": "configuration/apigateway/spring/redis/block-when-exhausted",
         "flags": 0,
-        "value": "true"
+        "value": "dHJ1ZQ=="
     },
     {
         "key": "configuration/apigateway/spring/redis/use-pool",
         "flags": 0,
-        "value": "true"
+        "value": "dHJ1ZQ=="
     },
     {
         "key": "configuration/apigateway/server/port",
         "flags": 0,
-        "value": "8080"
+        "value": "ODA4MA=="
     },
     {
         "key": "configuration/apigateway/zuul/prefix",
         "flags": 0,
-        "value": "/v1"
+        "value": "L3Yx"
     },
     {
         "key": "configuration/apigateway/zuul/routes/oauth2/path",
         "flags": 0,
-        "value": "/api/**"
+        "value": "L2FwaS8qKg=="
     },
     {
         "key": "configuration/apigateway/zuul/routes/oauth2/sensitiveHeaders",
         "flags": 0,
-        "value": "Cookie,Set-Cookie"
+        "value": "Q29va2llLFNldC1Db29raWU="
     },
     {
         "key": "configuration/apigateway/zuul/routes/oauth2/serviceId",
         "flags": 0,
-        "value": "oauth2"
+        "value": "b2F1dGgy"
     },
     {
         "key": "configuration/apigateway/zuul/routes/catalog/path",
         "flags": 0,
-        "value": "/catalog/**"
+        "value": "L2NhdGFsb2cvKio="
     },
     {
         "key": "configuration/apigateway/zuul/routes/catalog/sensitiveHeaders",
         "flags": 0,
-        "value": "Cookie,Set-Cookie"
+        "value": "Q29va2llLFNldC1Db29raWU="
     },
     {
         "key": "configuration/apigateway/zuul/routes/catalog/serviceId",
         "flags": 0,
-        "value": "catalog"
+        "value": "Y2F0YWxvZw=="
     },
     {
         "key": "configuration/apigateway/zuul/routes/transaction/path",
         "flags": 0,
-        "value": "/transaction/**"
+        "value": "L3RyYW5zYWN0aW9uLyoq"
     },
     {
         "key": "configuration/apigateway/zuul/routes/transaction/sensitiveHeaders",
         "flags": 0,
-        "value": "Cookie,Set-Cookie"
+        "value": "Q29va2llLFNldC1Db29raWU="
     },
     {
         "key": "configuration/apigateway/zuul/routes/transaction/serviceId",
         "flags": 0,
-        "value": "transaction"
+        "value": "dHJhbnNhY3Rpb24="
     },
     {
         "key": "configuration/apigateway/hystrix/command/default/execution/isolation/thread/timeoutInMilliseconds",
         "flags": 0,
-        "value": "30000"
+        "value": "MzAwMDA="
     },
     {
         "key": "configuration/apigateway/oauth2/ribbon/ReadTimeout",
         "flags": 0,
-        "value": "30000"
+        "value": "MzAwMDA="
     },
     {
         "key": "configuration/apigateway/catalog/ribbon/ReadTimeout",
         "flags": 0,
-        "value": "30000"
+        "value": "MzAwMDA="
     },
     {
         "key": "configuration/apigateway/transaction/ribbon/ReadTimeout",
         "flags": 0,
-        "value": "30000"
+        "value": "MzAwMDA="
     },
     {
         "key": "configuration/apigateway/management/security/enabled",
         "flags": 0,
-        "value": "false"
+        "value": "ZmFsc2U="
     }
 ]

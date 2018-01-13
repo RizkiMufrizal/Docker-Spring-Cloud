@@ -2,36 +2,36 @@
     {
         "key": "configuration/application/server/port",
         "flags": 0,
-        "value": "${PORT:0}"
+        "value": "JHtQT1JUOjB9"
     },
     {
         "key": "configuration/application/spring/jackson/serialization/indent_output",
         "flags": 0,
-        "value": "true"
+        "value": "dHJ1ZQ=="
     },
     {
         "key": "configuration/application/spring/cloud/consul/host",
         "flags": 0,
-        "value": "consul"
+        "value": "Y29uc3Vs"
     },
     {
         "key": "configuration/application/spring/cloud/consul/port",
         "flags": 0,
-        "value": "8500"
+        "value": "ODUwMA=="
     },
     {
         "key": "configuration/application/spring/cloud/consul/discovery/healthCheckPath",
         "flags": 0,
-        "value": "/health-check"
+        "value": "L2hlYWx0aC1jaGVjaw=="
     },
     {
         "key": "configuration/application/spring/cloud/consul/discovery/healthCheckInterval",
         "flags": 0,
-        "value": "20s"
+        "value": "MjBz"
     },
     {
         "key": "configuration/application/spring/cloud/consul/discovery/instanceId",
         "flags": 0,
-        "value": "${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}"
+        "value": "JHtzcHJpbmcuYXBwbGljYXRpb24ubmFtZX06JHt2Y2FwLmFwcGxpY2F0aW9uLmluc3RhbmNlX2lkOiR7c3ByaW5nLmFwcGxpY2F0aW9uLmluc3RhbmNlX2lkOiR7cmFuZG9tLnZhbHVlfX19"
     }
 ]
